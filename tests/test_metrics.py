@@ -1,10 +1,8 @@
 import numpy as np
 import pytest
-
 from prism_guard.analysis import analyze
 from prism_guard.metrics import calibration, estimate, population_stability
 from prism_guard.simulation import simulate_evaluation
-
 
 def test_simulation_is_deterministic_and_has_candidate_quality_lift():
     first, second = simulate_evaluation(seed=5), simulate_evaluation(seed=5)
@@ -23,4 +21,3 @@ def test_analysis_contract():
     assert result["decision"]["status"] in {"SHIP", "ITERATE", "HOLD"}
     assert len(result["guardrails"]) == 5
     assert set(result["task_slices"]) == {"research", "support", "coding", "creative"}
-
