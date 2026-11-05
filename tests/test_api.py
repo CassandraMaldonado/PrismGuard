@@ -1,9 +1,7 @@
 from fastapi.testclient import TestClient
-
 from prism_guard.api import app
 
 client = TestClient(app)
-
 
 def test_brief_endpoint():
     assert client.get("/api/health").json() == {"status": "ok"}
@@ -14,4 +12,3 @@ def test_brief_endpoint():
 
 def test_sample_validation():
     assert client.get("/api/brief?samples=50").status_code == 422
-
