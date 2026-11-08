@@ -25,3 +25,19 @@ PrismGuard simulates a labeled evaluation set and compares the candidate policy 
 - Shows where the candidate performs differently across task types and user groups.
 - Uses clear launch criteria, so it is easy to see why the recommendation is to ship, iterate, or hold.
 - Includes a Streamlit dashboard, tested analysis code, and an API for exploring the results.
+
+
+## Run it
+
+```bash
+python -m venv .venv
+source .venv/bin/activate
+pip install -e '.[dev]'
+streamlit run streamlit_app.py
+```
+
+You can also print a reproducible decision brief:
+
+```bash
+python -m prism_guard.cli --seed 41 --samples 3000
+```
