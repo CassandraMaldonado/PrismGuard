@@ -15,3 +15,13 @@ In this project, a new retrieval and response policy is being considered as a re
 - Does it hold up across task types and user cohorts?
 
 PrismGuard simulates a labeled evaluation set and compares the candidate policy with the current one. It then looks at the quality and reliability results together, checks whether the evaluation traffic has shifted, and produces a clear `SHIP`, `ITERATE`, or `HOLD` recommendation.
+
+## What makes this project different
+
+- Looks at quality, safety, latency, and cost together instead of focusing on one score.
+- Compares the candidate policy with the existing one using confidence intervals and task-level results.
+- Checks whether the model's confidence actually matches human-rated quality.
+- Looks for traffic drift before relying too heavily on offline evaluation results.
+- Shows where the candidate performs differently across task types and user groups.
+- Uses clear launch criteria, so it is easy to see why the recommendation is to ship, iterate, or hold.
+- Includes a Streamlit dashboard, tested analysis code, and an API for exploring the results.
