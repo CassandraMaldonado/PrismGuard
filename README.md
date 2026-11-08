@@ -41,3 +41,15 @@ You can also print a reproducible decision brief:
 ```bash
 python -m prism_guard.cli --seed 41 --samples 3000
 ```
+
+## How it works
+
+```mermaid
+flowchart LR
+    A["Create labeled evaluation data"] --> B["Check coverage and traffic drift"]
+    B --> C["Compare the current and candidate policies"]
+    C --> D["Review quality safety latency and cost"]
+    D --> E["Check calibration and performance by group"]
+    E --> F["Make a rollout recommendation"]
+```
+
