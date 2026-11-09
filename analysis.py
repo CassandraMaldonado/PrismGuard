@@ -1,5 +1,5 @@
 # Where the evaluation comes together. I compare the two policies, check the quality and safety guardrails, look for differences across slices,
-# measure calibration and drift, and turn the evidence into a rollout decision.
+# measure calibration and drift and turn the evidence into a rollout decision.
 
 from .metrics import calibration, estimate, population_stability
 from .simulation import COHORTS, TASKS, EvaluationSet, simulate_evaluation
@@ -17,7 +17,6 @@ def analyze(seed: int = 41, samples: int = 3_000) -> dict:
     latency = estimate(data.latency_ms, data.policy)
     cost = estimate(data.cost_usd, data.policy)
     calibration_result = calibration(data.confidence, data.human_quality)
-    # Current traffic is intentionally shifted a little to demonstrate the check.
     drift = population_stability(data.reference_length[~data.policy], data.reference_length[data.policy] + 24)
     task_slices = {str(task): _slice(data, data.task_type == task) for task in TASKS}
     cohort_slices = {str(cohort): _slice(data, data.cohort == cohort) for cohort in COHORTS}
