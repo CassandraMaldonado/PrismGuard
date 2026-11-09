@@ -1,6 +1,4 @@
-"""AI policy evaluation and explicit rollout decision logic."""
-
-# This is where I bring the evaluation together. I compare the two policies,
+# Where I bring the evaluation together. I compare the two policies,
 # check the quality and safety guardrails, look for differences across slices,
 # measure calibration and drift, and turn the evidence into a rollout decision.
 
