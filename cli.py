@@ -1,10 +1,8 @@
-"""Command-line entry point for reproducible AI evaluations."""
+#Command-line entry point for reproducible AI evaluations."""
 
 import argparse
 import json
-
 from .analysis import analyze
-
 
 def main():
     parser = argparse.ArgumentParser(description="Evaluate an AI product policy")
@@ -16,4 +14,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
