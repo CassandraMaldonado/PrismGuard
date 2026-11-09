@@ -1,5 +1,4 @@
-# Where I bring the evaluation together. I compare the two policies,
-# check the quality and safety guardrails, look for differences across slices,
+# Where the evaluation comes together. I compare the two policies, check the quality and safety guardrails, look for differences across slices,
 # measure calibration and drift, and turn the evidence into a rollout decision.
 
 from .metrics import calibration, estimate, population_stability
