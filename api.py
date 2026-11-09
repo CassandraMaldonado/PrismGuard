@@ -1,4 +1,4 @@
-# FastAPI delivery layer.
+#FastAPI delivery layer.
 
 from functools import lru_cache
 from fastapi import FastAPI, Query
