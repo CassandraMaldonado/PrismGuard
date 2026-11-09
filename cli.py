@@ -1,4 +1,4 @@
-#Command-line entry point for reproducible AI evaluations."""
+#Reproducible AI evaluations. 
 
 import argparse
 import json
