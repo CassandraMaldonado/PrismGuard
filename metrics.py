@@ -1,8 +1,7 @@
 """Inspectable metrics for policy comparison, calibration, and drift."""
 
 # I keep the measurement methods here so the assumptions are easy to inspect.
-# This includes effect estimates, confidence intervals, calibration error, and
-# a population-stability measure for comparing reference and current traffic.
+# This includes effect estimates, confidence intervals, calibration error, and a population-stability measure for comparing reference and current traffic.
 
 from dataclasses import asdict, dataclass
 
