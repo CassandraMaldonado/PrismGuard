@@ -1,5 +1,5 @@
 # I keep the measurement methods here so the assumptions are easy to inspect.
-# This includes effect estimates, confidence intervals, calibration error, and a population-stability measure for comparing reference and current traffic.
+# This includes effect estimates, confidence intervals, calibration error and a population-stability measure for comparing reference and current traffic.
 
 from dataclasses import asdict, dataclass
 import numpy as np
@@ -56,4 +56,3 @@ def population_stability(reference: np.ndarray, current: np.ndarray, bins: int =
     ref_share = np.maximum(ref_counts / len(reference), 1e-6)
     current_share = np.maximum(current_counts / len(current), 1e-6)
     return float(np.sum((current_share - ref_share) * np.log(current_share / ref_share)))
-
