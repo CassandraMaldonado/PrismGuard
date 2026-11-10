@@ -36,7 +36,7 @@ pip install -e '.[dev]'
 streamlit run streamlit_app.py
 ```
 
-You can also print a reproducible decision brief:
+To print a reproducible decision brief:
 
 ```bash
 python -m prism_guard.cli --seed 41 --samples 3000
