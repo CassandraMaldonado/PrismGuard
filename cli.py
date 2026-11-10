@@ -1,4 +1,4 @@
-#Reproducible AI evaluations. 
+# AI evaluations. 
 
 import argparse
 import json
