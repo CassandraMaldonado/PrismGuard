@@ -14,7 +14,7 @@ In this project, a new retrieval and response policy is being considered as a re
 - Is the quality gain worth the latency and inference cost?
 - Does it hold up across task types and user cohorts?
 
-PrismGuard simulates a labeled evaluation set and compares the candidate policy with the current one. It then looks at the quality and reliability results together, checks whether the evaluation traffic has shifted, and produces a clear `SHIP`, `ITERATE`, or `HOLD` recommendation.
+PrismGuard simulates a labeled evaluation set and compares the candidate policy with the current one. It then looks at the quality and reliability results together, checks whether the evaluation traffic has shifted, and produces a clear `SHIP`, `ITERATE` or `HOLD` recommendation.
 
 ## What makes this project different
 
