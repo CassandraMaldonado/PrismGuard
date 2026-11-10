@@ -1,6 +1,5 @@
 # I use synthetic data so the project is reproducible and does not expose real user conversations. 
-# The simulation includes task types, user cohorts, human
-# quality labels, confidence scores, safety flags, latency, and inference cost.
+# The simulation includes task types, user cohorts, human quality labels, confidence scores, safety flags, latency and inference cost.
 
 from dataclasses import dataclass
 import numpy as np
