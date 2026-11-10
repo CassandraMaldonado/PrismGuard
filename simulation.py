@@ -38,7 +38,7 @@ def simulate_evaluation(samples: int = 3_000, seed: int = 41) -> EvaluationSet:
     grounded = (rng.random(samples) < grounded_probability).astype(float)
     unsafe_probability = 0.010 + policy * 0.002 + (task_type == "creative") * 0.008
     unsafe = (rng.random(samples) < unsafe_probability).astype(float)
-    # Candidate confidence is closer to human quality, but not perfectly calibrated.
+    # confidence is closer to human quality, but not perfectly calibrated.
     confidence = np.clip(0.43 + 0.42 * human_quality + policy * 0.025 + rng.normal(0, 0.11, samples), 0.01, 0.99)
     latency_ms = np.maximum(80, rng.lognormal(np.log(520 + policy * 130), 0.24, samples))
     cost_usd = np.maximum(0.001, 0.010 + policy * rng.gamma(2.2, 0.008, samples))
