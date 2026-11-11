@@ -1,8 +1,6 @@
 # Decision brief for PrismGuard.
 
-# I use Streamlit to make the evaluation easier to explore. The analysis stays
-# in the package, while this file helps someone understand the tradeoffs behind
-# the model rollout decision.
+# The analysis stays in the package, while this file helps someone understand the tradeoffs behind the model rollout decision.
 
 import pandas as pd
 import plotly.graph_objects as go
