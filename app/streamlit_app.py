@@ -1,4 +1,4 @@
-#Decision brief for PrismGuard.
+# Decision brief for PrismGuard.
 
 # I use Streamlit to make the evaluation easier to explore. The analysis stays
 # in the package, while this file helps someone understand the tradeoffs behind
@@ -7,7 +7,6 @@
 import pandas as pd
 import plotly.graph_objects as go
 import streamlit as st
-
 from prism_guard.analysis import analyze
 
 st.set_page_config(page_title="PrismGuard", page_icon="◈", layout="wide")
