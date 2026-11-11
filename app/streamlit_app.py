@@ -1,4 +1,4 @@
-"""Interactive Streamlit decision brief for PrismGuard."""
+#Decision brief for PrismGuard.
 
 # I use Streamlit to make the evaluation easier to explore. The analysis stays
 # in the package, while this file helps someone understand the tradeoffs behind
